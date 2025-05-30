@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Me - Convert your photo into pixelart.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-pattern"></div>
+
+    <div class="main-container">
+        <div id="landingPage" class="content-section landing-page-section">
+            <h1 class="landing-title">Pixel Me</h1>
+            <div class="pixel-avatars">
+                <img src="https://pixel-me.tokyo/_nuxt/img/pixelart2.9fd4c94.png" alt="Pixel Avatar 1">
+                <img src="https://pixel-me.tokyo/_nuxt/img/pixelart2.9fd4c94.png" alt="Pixel Avatar 2">
+                <img src="https://pixel-me.tokyo/_nuxt/img/pixelart2.9fd4c94.png" alt="Pixel Avatar 3">
+                <img src="https://pixel-me.tokyo/_nuxt/img/pixelart2.9fd4c94.png" alt="Pixel Avatar 4">
+                <img src="https://pixel-me.tokyo/_nuxt/img/pixelart2.9fd4c94.png" alt="Pixel Avatar 5">
+            </div>
+            <p class="tagline">Convert your photo into pixelart.</p>
+            <button id="getStartedButton" class="get-started-button">Get started!</button>
+        </div>
+
+        <div id="pixelatorPage" class="content-section pixelator-page-section hidden">
+            <h1 class="pixelator-title">Pixelate Your Image</h1>
+
+            <div class="input-section">
+                <label for="imageUpload" class="upload-button">Upload Image</label>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+
+                <div class="pixel-size-control">
+                    <label for="pixelSize">Pixel Size:</label>
+                    <input type="range" id="pixelSize" min="2" max="50" value="10">
+                    <span id="pixelSizeValue">10</span>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="pixelCanvas"></canvas>
+            </div>
+
+            <button id="downloadButton" class="download-button" style="display: none;">Download Pixelated Image</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
